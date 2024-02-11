@@ -144,7 +144,7 @@ body {
     background: url(images/icon.svg);
 }
 
-.brend-slider__button-show:focus::before {
+.brend-slider__button-show:active::before {
     content: '';
     transform: rotate(180deg);
     
