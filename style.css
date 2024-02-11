@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Medium.woff') format('woff'),
+    url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Regular.woff') format('woff'),
+    url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+    font-family: "TT Lakes Regular";
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    color: #1B1C21;
+    background-color: #EAEAEA;
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+}
+
+.brand-slider__header {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: linear-gradient(90deg, rgba(234,234,234,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.brand-slider__container {
+    overflow-x: hidden;
+}
+
+/************************************************/
+
+
+.brand-slide__link {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+}
+
+.brand-slide__link::before {
+    content: "";
+    width: 7.5px;
+    height: 12px;
+    left: 15px;
+    top: 13px;
+    position: absolute;
+    background: url(images/arrow.svg);
+}
+
+/************************************************/
+
+.brand-slider__container .swiper-pagination {
+    top: 180px;
+}
+
+.brand-slider__container {
+    margin-bottom: 24px;
+    
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-wrapper {
+    padding-left: 16px;
+}
+
+.swiper-slide {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    height: 72px;
+}
+
+.brand-slider__container .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #B5B6BC;
+}
+
+.brend-slider__button-show {
+    position: relative;
+    font-family: 'TT Lakes Medium';
+    color: #1B1C21;
+    padding-left: 30px;
+    margin-left: 24px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    transition: all 0.2s ease-out;
+}
+
+.brend-slider__button-show:hover, .brend-slider__button-show:active {
+    opacity: 0.8;
+}
+
+.brend-slider__button-show:active {
+    transform: translateY(-3px);
+}
+
+.brend-slider__button-show::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width:24px;
+    height: 24px;
+    background: url(images/icon.svg);
+}
+
+@media (min-width: 376px) {
+    .brand-slider__container .swiper-pagination {
+        top: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .brand-slider__wrapper {
+        display: grid;
+        gap: 16px 24px;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+
+    .brand-slider__header--middle-window--padding-more  {
+        padding-left: 24px;
+    }
+
+    .brand-slider__wrapper--middle-window--more-padding {
+        box-sizing: border-box;
+        padding: 0 24px;
+    }
+
+    .brand-slider__container .swiper-slide {
+        width: auto;
+    }
+}
+
+@media (min-width: 1120px) {
+    .brand-slider__header--large-window--padding-more {
+        padding-left: 32px;
+    }
+
+    .brand-slider__wrapper--large-window--more-padding {
+        padding: 0 32px;
+        gap: 16px 32px;
+    }
+
+    .brand-slider__wrapper--large-window--grid-another {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+
+    .brend-slider__button-show--large-window--padding-more {
+        margin-left: 32px;
+    }
+}
+
+
+
+.hidden {
+    display: none;
+}
