@@ -6,7 +6,8 @@ let slideHidden = function (visible) {
         slide[i].classList.add('hidden');
       }
       buttonOpen.textContent = "Показать все";
-      buttonOpen.style.transform = 'translateY(0px)';
+      buttonContainer.style.transform = 'translateY(0px)';
+      buttonIcon.style.transform = 'scaleY(1)';
   }
 }
 
@@ -16,13 +17,14 @@ let slideVisible = function () {
       slide[i].classList.remove('hidden');
     }
     buttonOpen.textContent = "Скрыть";
-    buttonOpen.style.transform = 'translateY(10px)';
+    buttonContainer.style.transform = 'translateY(10px)';
+    buttonIcon.style.transform = 'scaleY(-1)';
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const width = window.innerWidth;
-  console.log(width);
+
   if (width < 768){
     const slider = new Swiper('.brand-slider__container', {
       pagination: {
@@ -31,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
 
       spaceBetween: 16,
-
-      freeMode: true,
 
       breakpoints: {
         // when window width is >= 320px
@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let width = window.innerWidth;
 let slide = document.querySelectorAll('.brand-slide');
 let buttonOpen = document.querySelector('.brend-slider__button-show');
+let buttonContainer = document.querySelector('.brend-slider__button-container');
+let buttonIcon = document.querySelector('.brend-slider__button-icon');
 
 if (width < 1120 && width >= 720) {
   slideHidden(6);  
